@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <title>Privacy Policy — Insulto</title>
+  <title>Política de Privacidade · Privacy Policy — Insulto</title>
   <style>
     :root {
       --fg: #1a1a1a;
@@ -23,11 +23,46 @@
       color: var(--fg);
       background: var(--bg);
     }
+    nav.lang-switch {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px 10px;
+      text-align: center;
+    }
+    nav.lang-switch button {
+      margin: 0 4px;
+      padding: 6px 16px;
+      font: inherit;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    }
+    nav.lang-switch button:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    nav.lang-switch button.active {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
     main {
       max-width: 760px;
       margin: 0 auto;
       padding: 40px 24px 80px;
     }
+    section.lang-block { display: none; }
+    section.lang-block.active { display: block; }
     h1 {
       font-size: 28px;
       letter-spacing: 0.4px;
@@ -91,185 +126,597 @@
       h1 { font-size: 24px; }
       h2 { font-size: 16px; }
       body { font-size: 15px; }
+      nav.lang-switch { padding: 10px 12px 8px; }
+      nav.lang-switch button { padding: 5px 12px; font-size: 11px; }
     }
   </style>
 </head>
 <body>
+  <nav class="lang-switch" aria-label="Language">
+    <button type="button" data-lang="pt" class="active">Português</button>
+    <button type="button" data-lang="en">English</button>
+  </nav>
   <main>
-    <p class="eyebrow">Insulto · Legal</p>
-    <h1>Privacy Policy</h1>
 
-    <p>
-      This Privacy Policy explains how the Insulto mobile application (hereby referred to
-      as &ldquo;Application&rdquo;), operated jointly by Paulo Oliveira and Jacqueline
-      Wendler (hereby referred to collectively as &ldquo;Service Provider&rdquo;), handles
-      your information. The Application is provided as an ad-supported service.
-    </p>
-    <p>
-      By using the Application, you agree to the practices described in this Privacy
-      Policy. If you do not agree, please do not use the Application.
-    </p>
+    <!-- ========================= PORTUGUESE (BR) ========================= -->
+    <section class="lang-block active" data-lang="pt" lang="pt-BR">
+      <p class="eyebrow">Insulto · Jurídico</p>
+      <h1>Política de Privacidade</h1>
 
-    <h2>Purpose of the Application and content notice</h2>
-    <div class="warning">
       <p>
-        Insulto is an entertainment and educational application intended exclusively for
-        users aged 18 and older. It teaches profanity, slurs, sexually explicit language,
-        and crude humor across multiple languages for cultural and linguistic
-        comprehension. The content is deliberately provocative and is not meant to be
-        taken seriously. The Service Provider does not endorse or encourage the use of any
-        language taught in the Application against any person or group. You are solely
-        responsible for how you use the content; the Service Provider accepts no
-        responsibility for misuse, offense caused, or any consequences arising from your
-        use of the material the Application teaches.
+        Esta Política de Privacidade explica como o aplicativo móvel Insulto (doravante
+        denominado &ldquo;Aplicativo&rdquo;), operado conjuntamente por Paulo Oliveira e
+        Jacqueline Wendler (doravante denominados, em conjunto, &ldquo;Provedor do
+        Serviço&rdquo;), trata as suas informações. O Aplicativo é fornecido como um serviço
+        mantido por publicidade.
       </p>
-    </div>
+      <p>
+        Ao usar o Aplicativo, você concorda com as práticas descritas nesta Política de
+        Privacidade. Se você não concordar, por favor, não use o Aplicativo.
+      </p>
 
-    <h2>Information the Application stores on your device</h2>
-    <p>
-      The Application stores the following data <strong>locally on your device only</strong>,
-      using the device&rsquo;s built-in storage (AsyncStorage). None of this data is
-      transmitted to or stored on any server operated by the Service Provider, who has no
-      backend infrastructure and no remote database that would receive it.
-    </p>
-    <ul>
-      <li>
-        A <strong>display name</strong> that you freely choose during account creation. A
-        pseudonym is acceptable; you are not required to enter your real name.
-      </li>
-      <li>
-        Your <strong>learning progress</strong> (lessons completed, XP earned, virtual
-        currency balance, achievements unlocked, daily streak, language preferences).
-      </li>
-      <li>
-        Your <strong>app settings</strong> (selected interface language, theme, motion +
-        haptic preferences, selected avatar).
-      </li>
-      <li>
-        Up to a small number of locally saved <strong>account snapshots</strong> if you
-        choose to switch between multiple in-app profiles on the same device.
-      </li>
-    </ul>
-    <p>
-      Because this data lives only on your device, the Service Provider cannot retrieve,
-      restore, export, or delete it for you. Uninstalling the Application or clearing its
-      storage removes all of it from your device permanently.
-    </p>
+      <h2>Finalidade do Aplicativo e aviso sobre o conteúdo</h2>
+      <div class="warning">
+        <p>
+          O Insulto é um aplicativo de entretenimento e educação destinado exclusivamente a
+          usuários com 18 anos de idade ou mais. Ele ensina palavrões, xingamentos,
+          linguagem sexualmente explícita e humor grosseiro em vários idiomas, para fins de
+          compreensão cultural e linguística. O conteúdo é deliberadamente provocativo e não
+          deve ser levado a sério. O Provedor do Serviço não apoia nem incentiva o uso de
+          qualquer linguagem ensinada no Aplicativo contra qualquer pessoa ou grupo. Você é o
+          único responsável pela forma como utiliza o conteúdo; o Provedor do Serviço não
+          assume qualquer responsabilidade por uso indevido, ofensas causadas ou quaisquer
+          consequências decorrentes do uso do material que o Aplicativo ensina.
+        </p>
+      </div>
 
-    <h2>Information collected by third-party services</h2>
-    <p>
-      The Application uses third-party services to display advertisements and to
-      facilitate operating-system functionality. These services may collect information
-      about your device and your interaction with their content, governed by their own
-      privacy policies, not by this one.
-    </p>
-    <p>
-      <strong>Google AdMob</strong> — Used to display rewarded video and interstitial
-      advertisements within the Application. AdMob may collect information including:
-    </p>
-    <ul>
-      <li>Advertising identifier (Apple IDFA on iOS, Google Advertising ID on Android)</li>
-      <li>IP address and approximate location derived from it</li>
-      <li>Device model, operating system version, language, and time zone</li>
-      <li>Interactions with ads (impressions, clicks, ad-completion events)</li>
-    </ul>
-    <p>
-      You can review Google&rsquo;s practices regarding advertising data in the
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
-      and learn more about AdMob specifically at the
-      <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob help center</a>.
-    </p>
-    <p>
-      <strong>Apple App Store and Google Play</strong> — These platforms process any
-      purchases you make in the Application and may collect device and transaction data in
-      accordance with their respective privacy policies. The Service Provider has no
-      direct access to your payment information.
-    </p>
+      <h2>Informações que o Aplicativo armazena no seu dispositivo</h2>
+      <p>
+        O Aplicativo armazena os dados a seguir <strong>apenas localmente no seu
+        dispositivo</strong>, usando o armazenamento interno do dispositivo (AsyncStorage).
+        Nenhum desses dados é transmitido para nem armazenado em qualquer servidor operado
+        pelo Provedor do Serviço, que não possui infraestrutura de backend nem banco de dados
+        remoto que pudesse recebê-los.
+      </p>
+      <ul>
+        <li>
+          Um <strong>nome de exibição</strong> que você escolhe livremente durante a criação
+          da conta. Um pseudônimo é aceitável; você não é obrigado a informar o seu nome
+          real.
+        </li>
+        <li>
+          Seu <strong>progresso de aprendizado</strong> (lições concluídas, XP acumulado,
+          saldo de moeda virtual, conquistas desbloqueadas, sequência diária, preferências de
+          idioma).
+        </li>
+        <li>
+          Suas <strong>configurações do aplicativo</strong> (idioma da interface
+          selecionado, tema, preferências de movimento e vibração, avatar selecionado).
+        </li>
+        <li>
+          Um pequeno número de <strong>cópias de conta</strong> salvas localmente, caso você
+          opte por alternar entre vários perfis dentro do aplicativo no mesmo dispositivo.
+        </li>
+      </ul>
+      <p>
+        Como esses dados ficam apenas no seu dispositivo, o Provedor do Serviço não consegue
+        recuperá-los, restaurá-los, exportá-los ou excluí-los por você. Desinstalar o
+        Aplicativo ou limpar o seu armazenamento remove permanentemente todos esses dados do
+        seu dispositivo.
+      </p>
 
-    <h2>Consent for personalized advertising</h2>
-    <p>
-      If you are located in the European Economic Area, the United Kingdom, or
-      Switzerland, the Application will display a consent prompt the first time you launch
-      it. You may choose whether to allow the use of your device&rsquo;s advertising
-      identifier for personalized advertising. If you decline, you will still see ads, but
-      they will be non-personalized.
-    </p>
-    <p>
-      On iOS 14.5 and later, the Application will additionally request your permission via
-      the system App Tracking Transparency prompt before tracking you across apps for
-      advertising purposes. You may decline at any time through your device&rsquo;s
-      Settings &rarr; Privacy &rarr; Tracking.
-    </p>
+      <h2>Informações coletadas por serviços de terceiros</h2>
+      <p>
+        O Aplicativo utiliza serviços de terceiros para exibir anúncios e para viabilizar
+        funcionalidades do sistema operacional. Esses serviços podem coletar informações
+        sobre o seu dispositivo e sobre a sua interação com o conteúdo deles, regidas pelas
+        respectivas políticas de privacidade, e não por esta.
+      </p>
+      <p>
+        <strong>Google AdMob</strong> — Utilizado para exibir anúncios em vídeo recompensado
+        e anúncios intersticiais dentro do Aplicativo. O AdMob pode coletar informações,
+        incluindo:
+      </p>
+      <ul>
+        <li>Identificador de publicidade (Apple IDFA no iOS, Google Advertising ID no Android)</li>
+        <li>Endereço IP e localização aproximada derivada dele</li>
+        <li>Modelo do dispositivo, versão do sistema operacional, idioma e fuso horário</li>
+        <li>Interações com anúncios (impressões, cliques, eventos de conclusão de anúncio)</li>
+      </ul>
+      <p>
+        Você pode consultar as práticas do Google relativas a dados de publicidade na
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>
+        e saber mais sobre o AdMob especificamente na
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Central de Ajuda do AdMob</a>.
+      </p>
+      <p>
+        Os dados coletados pelo Google AdMob podem ser transferidos para e processados nos
+        Estados Unidos ou em outros países fora da sua jurisdição. O Google mantém
+        salvaguardas adequadas para tais transferências, incluindo as Cláusulas Contratuais
+        Padrão da Comissão Europeia e a certificação no âmbito da Estrutura de Privacidade de
+        Dados UE&ndash;EUA, para assegurar um nível de proteção equivalente ao da sua
+        jurisdição de origem.
+      </p>
+      <p>
+        <strong>App Store da Apple e Google Play</strong> — Essas plataformas processam
+        quaisquer compras que você fizer no Aplicativo e podem coletar dados do dispositivo e
+        da transação de acordo com as suas respectivas políticas de privacidade. O Provedor
+        do Serviço não tem acesso direto às suas informações de pagamento.
+      </p>
+      <p>
+        A base legal para o processamento por meio desses serviços de terceiros, nos termos
+        do Artigo 6 do GDPR, é o seu <strong>consentimento</strong> (para publicidade
+        personalizada no Espaço Econômico Europeu, no Reino Unido e na Suíça) e os
+        <strong>legítimos interesses</strong> do Provedor do Serviço (para publicidade não
+        personalizada e para a operação das funcionalidades básicas do Aplicativo). Quando o
+        consentimento for a base legal, você pode retirá-lo a qualquer momento por meio das
+        configurações de publicidade do seu dispositivo ou desinstalando o Aplicativo.
+      </p>
 
-    <h2>Your rights</h2>
-    <p>
-      If you are a resident of the European Economic Area, the United Kingdom, Switzerland,
-      or California, you have the right to:
-    </p>
-    <ul>
-      <li>Access the personal data being processed about you</li>
-      <li>Request rectification or erasure of that data</li>
-      <li>Restrict or object to processing</li>
-      <li>Data portability</li>
-      <li>Lodge a complaint with your local data protection authority</li>
-      <li>Withdraw consent previously given for personalized advertising</li>
-    </ul>
-    <p>
-      Because Insulto stores no personal data on its own servers, requests concerning
-      data collected by third-party services (such as advertising identifiers handled by
-      AdMob) should be directed to those service providers via the links above. For
-      anything else, contact the Service Provider at the email below.
-    </p>
+      <h2>Retenção de dados</h2>
+      <p>
+        Os dados armazenados localmente no seu dispositivo permanecem até que você desinstale
+        o Aplicativo ou limpe o seu armazenamento, momento em que todos eles são removidos
+        permanentemente. As informações processadas por serviços de terceiros (notadamente o
+        Google AdMob) são retidas de acordo com as políticas de retenção desses próprios
+        serviços, que você pode consultar por meio dos links fornecidos acima. O próprio
+        Provedor do Serviço não armazena nenhum dado pessoal em qualquer servidor e, portanto,
+        não tem um período de retenção próprio a divulgar.
+      </p>
 
-    <h2>Security</h2>
-    <p>
-      Data stored on your device is protected by the security mechanisms of your
-      device&rsquo;s operating system. The Service Provider strongly advises against
-      jailbreaking or rooting your device, as such actions can compromise these
-      protections. The Service Provider cannot guarantee the absolute security of any
-      information transmitted to or processed by third-party services such as AdMob.
-    </p>
+      <h2>Consentimento para publicidade personalizada</h2>
+      <p>
+        Se você estiver localizado no Espaço Econômico Europeu, no Reino Unido ou na Suíça, o
+        Aplicativo exibirá um aviso de consentimento na primeira vez que você o iniciar. Você
+        poderá escolher se permite ou não o uso do identificador de publicidade do seu
+        dispositivo para publicidade personalizada. Se você recusar, ainda verá anúncios, mas
+        eles serão não personalizados.
+      </p>
+      <p>
+        No iOS 14.5 e posteriores, o Aplicativo solicitará adicionalmente a sua permissão por
+        meio do aviso de Transparência de Rastreamento de Apps (App Tracking Transparency) do
+        sistema antes de rastreá-lo entre aplicativos para fins de publicidade. Você pode
+        recusar a qualquer momento nas Configurações do seu dispositivo &rarr; Privacidade
+        &rarr; Rastreamento.
+      </p>
 
-    <h2>Children&rsquo;s privacy</h2>
-    <p>
-      The Application is intended exclusively for users aged 18 and older and is not
-      directed at children. The Service Provider does not knowingly collect personally
-      identifiable information from anyone under 18. If you become aware that a child has
-      provided personal information through the Application, please contact the Service
-      Provider so that the data can be removed.
-    </p>
+      <h2>Seus direitos</h2>
+      <p>
+        Se você for residente do Espaço Econômico Europeu, do Reino Unido, da Suíça, da
+        Califórnia ou do Brasil, você tem o direito de:
+      </p>
+      <ul>
+        <li>Acessar os dados pessoais que estão sendo processados sobre você</li>
+        <li>Solicitar a retificação ou a eliminação desses dados</li>
+        <li>Restringir o processamento ou se opor a ele</li>
+        <li>Portabilidade dos dados</li>
+        <li>Apresentar uma reclamação à autoridade local de proteção de dados</li>
+        <li>Retirar o consentimento anteriormente concedido para publicidade personalizada</li>
+      </ul>
+      <p>
+        Como o Insulto não armazena nenhum dado pessoal nos seus próprios servidores, os
+        pedidos relativos a dados coletados por serviços de terceiros (como os identificadores
+        de publicidade tratados pelo AdMob) devem ser direcionados a esses provedores de
+        serviços por meio dos links acima. Para qualquer outra questão, entre em contato com o
+        Provedor do Serviço no e-mail abaixo.
+      </p>
 
-    <h2>Changes to this Privacy Policy</h2>
-    <p>
-      The Service Provider may update this Privacy Policy from time to time. You are
-      advised to review this page periodically. Changes take effect when posted on this
-      page. Your continued use of the Application after changes are posted constitutes
-      acceptance of the revised policy.
-    </p>
+      <h2>Residentes da Califórnia (aviso CCPA / CPRA)</h2>
+      <p>
+        Se você for residente da Califórnia, você tem direitos adicionais nos termos da Lei de
+        Privacidade do Consumidor da Califórnia (CCPA) e da Lei de Direitos de Privacidade da
+        Califórnia (CPRA), incluindo o direito de:
+      </p>
+      <ul>
+        <li>Saber quais categorias de informações pessoais são coletadas sobre você</li>
+        <li>Solicitar a exclusão das suas informações pessoais</li>
+        <li>Corrigir informações pessoais incorretas</li>
+        <li>Recusar a venda ou o compartilhamento das suas informações pessoais para
+          publicidade comportamental entre contextos</li>
+        <li>Limitar o uso de informações pessoais sensíveis</li>
+        <li>Estar livre de retaliação por exercer qualquer um desses direitos</li>
+      </ul>
+      <p>
+        As categorias de informações pessoais coletadas por meio do Aplicativo,
+        principalmente pelo Google AdMob em nome do Provedor do Serviço, são:
+        <strong>identificadores</strong> (identificador de publicidade),
+        <strong>atividade na internet ou em outras redes</strong> (impressões, cliques e
+        eventos de interação com anúncios), <strong>dados de geolocalização</strong>
+        (aproximados, derivados do endereço IP) e <strong>inferências</strong> tiradas dos
+        itens acima para sugerir conteúdo de anúncios. O próprio Aplicativo não coleta nem
+        armazena nenhuma dessas categorias nos seus próprios servidores.
+      </p>
+      <p>
+        Para recusar a publicidade personalizada (o que constitui
+        &ldquo;compartilhamento&rdquo; nos termos da CPRA), recuse o consentimento no aviso
+        exibido dentro do aplicativo quando ele aparecer, use a configuração &ldquo;Limitar
+        Rastreamento de Anúncios&rdquo; ou &ldquo;Redefinir Identificador de Publicidade&rdquo;
+        do seu dispositivo, ou entre em contato com o Provedor do Serviço no e-mail abaixo.
+        Para exercer qualquer outro direito previsto na CCPA, entre em contato com o Provedor
+        do Serviço pelo e-mail
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
 
-    <div class="effective">
-      This Privacy Policy is effective as of <strong>2026-05-20</strong>.
-    </div>
+      <h2>Residentes do Brasil (aviso LGPD)</h2>
+      <p>
+        Se você for residente do Brasil, o tratamento dos seus dados pessoais é regido pela
+        Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 &mdash; &ldquo;LGPD&rdquo;).
+        A LGPD aplica-se ao tratamento de dados pessoais realizado no território nacional ou
+        que tenha por objetivo oferecer bens ou serviços a indivíduos localizados no Brasil,
+        independentemente do país onde o agente de tratamento esteja sediado.
+      </p>
+      <p>
+        Para fins da LGPD, o Provedor do Serviço atua como <strong>controlador</strong> dos
+        dados na medida em que define as finalidades do tratamento, ainda que o tratamento em
+        si seja realizado por terceiros (notadamente o Google AdMob) em seu nome. As bases
+        legais para o tratamento, nos termos do Artigo 7 da LGPD, são o seu
+        <strong>consentimento</strong> (para publicidade personalizada) e o
+        <strong>legítimo interesse</strong> do Provedor do Serviço (para publicidade não
+        personalizada e para a operação das funcionalidades básicas do Aplicativo). Quando o
+        consentimento for a base legal, você pode revogá-lo a qualquer momento, sem que isso
+        afete a legalidade do tratamento realizado antes da revogação.
+      </p>
+      <p>
+        Como titular dos dados, nos termos do Artigo 18 da LGPD, você tem o direito de obter,
+        a qualquer momento e mediante requisição:
+      </p>
+      <ul>
+        <li>Confirmação da existência de tratamento dos seus dados</li>
+        <li>Acesso aos seus dados</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou
+          tratados em desconformidade com a LGPD</li>
+        <li>Portabilidade dos seus dados a outro fornecedor de serviço ou produto</li>
+        <li>Eliminação dos dados pessoais tratados com base no seu consentimento</li>
+        <li>Informação sobre as entidades públicas e privadas com as quais o Provedor do
+          Serviço compartilhou os seus dados</li>
+        <li>Informação sobre a possibilidade de não fornecer consentimento e sobre as
+          consequências da negativa</li>
+        <li>Revogação do consentimento anteriormente concedido</li>
+      </ul>
+      <p>
+        Como o Insulto não armazena nenhum dado pessoal nos seus próprios servidores, os
+        pedidos relativos a dados coletados por serviços de terceiros (como os identificadores
+        de publicidade tratados pelo Google AdMob) devem ser direcionados a esses provedores
+        por meio dos links indicados acima. Para exercer qualquer um dos seus direitos
+        previstos na LGPD ou para tirar dúvidas sobre o tratamento dos seus dados, entre em
+        contato com o Provedor do Serviço pelo e-mail
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>. Você também tem o
+        direito de apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).
+      </p>
 
-    <h2>Governing law</h2>
-    <p>
-      This Privacy Policy is governed by the laws of Italy. Any dispute arising in
-      connection with this Privacy Policy shall be subject to the exclusive jurisdiction
-      of the courts of Italy, without prejudice to your statutory rights under European
-      Union data protection law.
-    </p>
+      <h2>Segurança</h2>
+      <p>
+        Os dados armazenados no seu dispositivo são protegidos pelos mecanismos de segurança
+        do sistema operacional do seu dispositivo. O Provedor do Serviço recomenda
+        enfaticamente que você não faça jailbreak nem root no seu dispositivo, pois tais ações
+        podem comprometer essas proteções. O Provedor do Serviço não pode garantir a segurança
+        absoluta de qualquer informação transmitida a ou processada por serviços de terceiros,
+        como o AdMob.
+      </p>
 
-    <h2>Contact us</h2>
-    <p>
-      If you have any questions about this Privacy Policy or wish to exercise any of the
-      rights described above, please contact the Service Provider at
-      <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
-    </p>
+      <h2>Privacidade das crianças</h2>
+      <p>
+        O Aplicativo é destinado exclusivamente a usuários com 18 anos de idade ou mais e não
+        é direcionado a crianças. O Provedor do Serviço não coleta intencionalmente
+        informações de identificação pessoal de ninguém com menos de 18 anos. Se você tomar
+        conhecimento de que uma criança forneceu informações pessoais por meio do Aplicativo,
+        entre em contato com o Provedor do Serviço para que os dados possam ser removidos.
+      </p>
 
-    <footer>
-      &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler &middot;
-      <a href="terms.html">Terms &amp; Conditions</a>
-    </footer>
+      <h2>Alterações nesta Política de Privacidade</h2>
+      <p>
+        O Provedor do Serviço pode atualizar esta Política de Privacidade periodicamente.
+        Recomenda-se que você revise esta página de tempos em tempos. As alterações entram em
+        vigor quando publicadas nesta página. O uso continuado do Aplicativo após a publicação
+        das alterações constitui aceitação da política revisada.
+      </p>
+
+      <div class="effective">
+        Esta Política de Privacidade entra em vigor em <strong>2026-05-22</strong>.
+      </div>
+
+      <h2>Lei aplicável</h2>
+      <p>
+        Esta Política de Privacidade é regida pelas leis da Itália. Qualquer disputa
+        decorrente em conexão com esta Política de Privacidade estará sujeita à jurisdição
+        exclusiva dos tribunais da Itália, sem prejuízo dos seus direitos legais previstos na
+        legislação de proteção de dados da União Europeia.
+      </p>
+
+      <h2>Fale conosco</h2>
+      <p>
+        Se você tiver qualquer dúvida sobre esta Política de Privacidade ou desejar exercer
+        qualquer um dos direitos descritos acima, entre em contato com o Provedor do Serviço
+        pelo e-mail
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
+
+      <footer>
+        &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler &middot;
+        <a href="terms.html">Termos &amp; Condições</a>
+      </footer>
+    </section>
+
+    <!-- ========================= ENGLISH ========================= -->
+    <section class="lang-block" data-lang="en" lang="en">
+      <p class="eyebrow">Insulto · Legal</p>
+      <h1>Privacy Policy</h1>
+
+      <p>
+        This Privacy Policy explains how the Insulto mobile application (hereby referred to
+        as &ldquo;Application&rdquo;), operated jointly by Paulo Oliveira and Jacqueline
+        Wendler (hereby referred to collectively as &ldquo;Service Provider&rdquo;), handles
+        your information. The Application is provided as an ad-supported service.
+      </p>
+      <p>
+        By using the Application, you agree to the practices described in this Privacy
+        Policy. If you do not agree, please do not use the Application.
+      </p>
+
+      <h2>Purpose of the Application and content notice</h2>
+      <div class="warning">
+        <p>
+          Insulto is an entertainment and educational application intended exclusively for
+          users aged 18 and older. It teaches profanity, slurs, sexually explicit language,
+          and crude humor across multiple languages for cultural and linguistic
+          comprehension. The content is deliberately provocative and is not meant to be
+          taken seriously. The Service Provider does not endorse or encourage the use of any
+          language taught in the Application against any person or group. You are solely
+          responsible for how you use the content; the Service Provider accepts no
+          responsibility for misuse, offense caused, or any consequences arising from your
+          use of the material the Application teaches.
+        </p>
+      </div>
+
+      <h2>Information the Application stores on your device</h2>
+      <p>
+        The Application stores the following data <strong>locally on your device only</strong>,
+        using the device&rsquo;s built-in storage (AsyncStorage). None of this data is
+        transmitted to or stored on any server operated by the Service Provider, who has no
+        backend infrastructure and no remote database that would receive it.
+      </p>
+      <ul>
+        <li>
+          A <strong>display name</strong> that you freely choose during account creation. A
+          pseudonym is acceptable; you are not required to enter your real name.
+        </li>
+        <li>
+          Your <strong>learning progress</strong> (lessons completed, XP earned, virtual
+          currency balance, achievements unlocked, daily streak, language preferences).
+        </li>
+        <li>
+          Your <strong>app settings</strong> (selected interface language, theme, motion +
+          haptic preferences, selected avatar).
+        </li>
+        <li>
+          Up to a small number of locally saved <strong>account snapshots</strong> if you
+          choose to switch between multiple in-app profiles on the same device.
+        </li>
+      </ul>
+      <p>
+        Because this data lives only on your device, the Service Provider cannot retrieve,
+        restore, export, or delete it for you. Uninstalling the Application or clearing its
+        storage removes all of it from your device permanently.
+      </p>
+
+      <h2>Information collected by third-party services</h2>
+      <p>
+        The Application uses third-party services to display advertisements and to
+        facilitate operating-system functionality. These services may collect information
+        about your device and your interaction with their content, governed by their own
+        privacy policies, not by this one.
+      </p>
+      <p>
+        <strong>Google AdMob</strong> — Used to display rewarded video and interstitial
+        advertisements within the Application. AdMob may collect information including:
+      </p>
+      <ul>
+        <li>Advertising identifier (Apple IDFA on iOS, Google Advertising ID on Android)</li>
+        <li>IP address and approximate location derived from it</li>
+        <li>Device model, operating system version, language, and time zone</li>
+        <li>Interactions with ads (impressions, clicks, ad-completion events)</li>
+      </ul>
+      <p>
+        You can review Google&rsquo;s practices regarding advertising data in the
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+        and learn more about AdMob specifically at the
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob help center</a>.
+      </p>
+      <p>
+        Data collected by Google AdMob may be transferred to and processed in the
+        United States or other countries outside your jurisdiction. Google
+        maintains appropriate safeguards for such transfers, including the
+        European Commission&rsquo;s Standard Contractual Clauses and
+        certification under the EU&ndash;US Data Privacy Framework, to ensure a
+        level of protection equivalent to that of your home jurisdiction.
+      </p>
+      <p>
+        <strong>Apple App Store and Google Play</strong> — These platforms process any
+        purchases you make in the Application and may collect device and transaction data in
+        accordance with their respective privacy policies. The Service Provider has no
+        direct access to your payment information.
+      </p>
+      <p>
+        The legal basis for processing through these third-party services, under
+        Article 6 of the GDPR, is your <strong>consent</strong> (for personalized
+        advertising in the European Economic Area, the United Kingdom, and
+        Switzerland) and the Service Provider&rsquo;s <strong>legitimate
+        interests</strong> (for non-personalized advertising and operating the
+        Application&rsquo;s basic functionality). Where consent is the legal basis,
+        you may withdraw it at any time through your device&rsquo;s advertising
+        settings or by uninstalling the Application.
+      </p>
+
+      <h2>Data retention</h2>
+      <p>
+        Data stored locally on your device persists until you uninstall the
+        Application or clear its storage, at which point all of it is removed
+        permanently. Information processed by third-party services (notably
+        Google AdMob) is retained according to those services&rsquo; own
+        retention policies, which you can review through the links provided
+        above. The Service Provider itself stores no personal data on any server
+        and therefore has no separate retention period to disclose.
+      </p>
+
+      <h2>Consent for personalized advertising</h2>
+      <p>
+        If you are located in the European Economic Area, the United Kingdom, or
+        Switzerland, the Application will display a consent prompt the first time you launch
+        it. You may choose whether to allow the use of your device&rsquo;s advertising
+        identifier for personalized advertising. If you decline, you will still see ads, but
+        they will be non-personalized.
+      </p>
+      <p>
+        On iOS 14.5 and later, the Application will additionally request your permission via
+        the system App Tracking Transparency prompt before tracking you across apps for
+        advertising purposes. You may decline at any time through your device&rsquo;s
+        Settings &rarr; Privacy &rarr; Tracking.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        If you are a resident of the European Economic Area, the United Kingdom, Switzerland,
+        or California, you have the right to:
+      </p>
+      <ul>
+        <li>Access the personal data being processed about you</li>
+        <li>Request rectification or erasure of that data</li>
+        <li>Restrict or object to processing</li>
+        <li>Data portability</li>
+        <li>Lodge a complaint with your local data protection authority</li>
+        <li>Withdraw consent previously given for personalized advertising</li>
+      </ul>
+      <p>
+        Because Insulto stores no personal data on its own servers, requests concerning
+        data collected by third-party services (such as advertising identifiers handled by
+        AdMob) should be directed to those service providers via the links above. For
+        anything else, contact the Service Provider at the email below.
+      </p>
+
+      <h2>California residents (CCPA / CPRA notice)</h2>
+      <p>
+        If you are a California resident, you have additional rights under the
+        California Consumer Privacy Act (CCPA) and the California Privacy Rights
+        Act (CPRA), including the right to:
+      </p>
+      <ul>
+        <li>Know what categories of personal information are collected about you</li>
+        <li>Request deletion of your personal information</li>
+        <li>Correct inaccurate personal information</li>
+        <li>Opt out of the sale or sharing of your personal information for
+          cross-context behavioral advertising</li>
+        <li>Limit the use of sensitive personal information</li>
+        <li>Be free from retaliation for exercising any of these rights</li>
+      </ul>
+      <p>
+        The categories of personal information collected through the Application,
+        primarily by Google AdMob on the Service Provider&rsquo;s behalf, are:
+        <strong>identifiers</strong> (advertising identifier),
+        <strong>internet or other network activity</strong> (ad impressions,
+        clicks, and interaction events), <strong>geolocation data</strong>
+        (approximate, derived from IP address), and <strong>inferences</strong>
+        drawn from the above to suggest ad content. The Application itself does
+        not collect or store any of these categories on its own servers.
+      </p>
+      <p>
+        To opt out of personalized advertising (which constitutes
+        &ldquo;sharing&rdquo; under the CPRA), decline consent on the in-app
+        prompt when it appears, use your device&rsquo;s &ldquo;Limit Ad
+        Tracking&rdquo; or &ldquo;Reset Advertising Identifier&rdquo; setting, or
+        contact the Service Provider at the email below. To exercise any other
+        CCPA right, contact the Service Provider at
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        Data stored on your device is protected by the security mechanisms of your
+        device&rsquo;s operating system. The Service Provider strongly advises against
+        jailbreaking or rooting your device, as such actions can compromise these
+        protections. The Service Provider cannot guarantee the absolute security of any
+        information transmitted to or processed by third-party services such as AdMob.
+      </p>
+
+      <h2>Children&rsquo;s privacy</h2>
+      <p>
+        The Application is intended exclusively for users aged 18 and older and is not
+        directed at children. The Service Provider does not knowingly collect personally
+        identifiable information from anyone under 18. If you become aware that a child has
+        provided personal information through the Application, please contact the Service
+        Provider so that the data can be removed.
+      </p>
+
+      <h2>Changes to this Privacy Policy</h2>
+      <p>
+        The Service Provider may update this Privacy Policy from time to time. You are
+        advised to review this page periodically. Changes take effect when posted on this
+        page. Your continued use of the Application after changes are posted constitutes
+        acceptance of the revised policy.
+      </p>
+
+      <div class="effective">
+        This Privacy Policy is effective as of <strong>2026-05-22</strong>.
+      </div>
+
+      <h2>Governing law</h2>
+      <p>
+        This Privacy Policy is governed by the laws of Italy. Any dispute arising in
+        connection with this Privacy Policy shall be subject to the exclusive jurisdiction
+        of the courts of Italy, without prejudice to your statutory rights under European
+        Union data protection law.
+      </p>
+
+      <h2>Contact us</h2>
+      <p>
+        If you have any questions about this Privacy Policy or wish to exercise any of the
+        rights described above, please contact the Service Provider at
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
+
+      <footer>
+        &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler &middot;
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </footer>
+    </section>
+
   </main>
+
+  <script>
+    (function () {
+      var AVAILABLE = ['pt', 'en'];
+      var DEFAULT_LANG = 'pt';
+
+      function pickInitialLang() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var fromQuery = params.get('lang');
+          if (fromQuery && AVAILABLE.indexOf(fromQuery) !== -1) return fromQuery;
+        } catch (_) { /* no-op */ }
+        var browser = (navigator.language || navigator.userLanguage || DEFAULT_LANG).toLowerCase();
+        if (browser.indexOf('pt') === 0) return 'pt';
+        if (browser.indexOf('en') === 0) return 'en';
+        return DEFAULT_LANG;
+      }
+
+      function setLang(lang) {
+        var sections = document.querySelectorAll('section.lang-block');
+        var buttons = document.querySelectorAll('nav.lang-switch button');
+        sections.forEach(function (el) { el.classList.toggle('active', el.dataset.lang === lang); });
+        buttons.forEach(function (el) { el.classList.toggle('active', el.dataset.lang === lang); });
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+        document.title = lang === 'pt'
+          ? 'Política de Privacidade — Insulto'
+          : 'Privacy Policy — Insulto';
+      }
+
+      var initial = pickInitialLang();
+      if (initial !== DEFAULT_LANG) setLang(initial);
+
+      document.querySelectorAll('nav.lang-switch button').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+    })();
+  </script>
 </body>
 </html>

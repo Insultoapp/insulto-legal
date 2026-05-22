@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <title>Terms & Conditions — Insulto</title>
+  <title>Termos &amp; Condições · Terms &amp; Conditions — Insulto</title>
   <style>
     :root {
       --fg: #1a1a1a;
@@ -23,11 +23,46 @@
       color: var(--fg);
       background: var(--bg);
     }
+    nav.lang-switch {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px 10px;
+      text-align: center;
+    }
+    nav.lang-switch button {
+      margin: 0 4px;
+      padding: 6px 16px;
+      font: inherit;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    }
+    nav.lang-switch button:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    nav.lang-switch button.active {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
     main {
       max-width: 760px;
       margin: 0 auto;
       padding: 40px 24px 80px;
     }
+    section.lang-block { display: none; }
+    section.lang-block.active { display: block; }
     h1 {
       font-size: 28px;
       letter-spacing: 0.4px;
@@ -77,6 +112,25 @@
       border-radius: 4px;
     }
     .warning p { margin: 0; }
+    .highlight {
+      margin: 16px 0;
+      padding: 14px 18px;
+      background: #fff8e6;
+      border: 1px solid #e8c869;
+      border-left: 3px solid #c79100;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .highlight p { margin: 0; }
+    .highlight .label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #8a6a00;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
     footer {
       margin-top: 48px;
       padding-top: 24px;
@@ -90,185 +144,461 @@
       h1 { font-size: 24px; }
       h2 { font-size: 16px; }
       body { font-size: 15px; }
+      nav.lang-switch { padding: 10px 12px 8px; }
+      nav.lang-switch button { padding: 5px 12px; font-size: 11px; }
     }
   </style>
 </head>
 <body>
+  <nav class="lang-switch" aria-label="Language">
+    <button type="button" data-lang="pt" class="active">Português</button>
+    <button type="button" data-lang="en">English</button>
+  </nav>
   <main>
-    <p class="eyebrow">Insulto · Legal</p>
-    <h1>Terms &amp; Conditions</h1>
 
-    <p>
-      These terms and conditions apply to the Insulto app (hereby referred to as
-      &ldquo;Application&rdquo;) for mobile devices that was created jointly by Paulo
-      Oliveira and Jacqueline Wendler (hereby referred to collectively as &ldquo;Service
-      Provider&rdquo;) as an Ad Supported service.
-    </p>
-    <p>
-      Upon downloading or utilizing the Application, you are automatically agreeing to the
-      following terms. It is strongly advised that you thoroughly read and understand these
-      terms prior to using the Application.
-    </p>
+    <!-- ========================= PORTUGUESE (BR) ========================= -->
+    <section class="lang-block active" data-lang="pt" lang="pt-BR">
+      <p class="eyebrow">Insulto · Jurídico</p>
+      <h1>Termos &amp; Condições</h1>
 
-    <h2>Age requirement and content warning</h2>
-    <div class="warning">
       <p>
-        The Application is intended exclusively for users aged 18 and older. It contains
-        profanity, slurs, sexually explicit language, and crude humor presented in an
-        educational context (language learning). By using the Application you confirm that
-        you are at least 18 years old and that you understand the content is deliberately
-        provocative. The Service Provider does not endorse the use of any language taught
-        in the Application against any person or group; the content exists for cultural
-        and linguistic comprehension. If you find this kind of material offensive, do not
-        use the Application.
+        Estes termos e condições aplicam-se ao aplicativo Insulto (doravante denominado
+        &ldquo;Aplicativo&rdquo;) para dispositivos móveis, criado conjuntamente por Paulo
+        Oliveira e Jacqueline Wendler (doravante denominados, em conjunto, &ldquo;Provedor do
+        Serviço&rdquo;) como um serviço mantido por publicidade.
       </p>
-      <p style="margin-top: 10px;">
-        <strong>The Application is provided for entertainment and educational purposes
-        only.</strong> Its content is intentionally crude, irreverent, and not meant to be
-        taken seriously. You are solely responsible for how you use the language and
-        material taught by the Application. The Service Provider accepts no responsibility
-        for any consequence &mdash; social, professional, personal, legal, or otherwise
-        &mdash; arising from your decision to repeat, share, or otherwise act on the
-        content. By using the Application, you agree to indemnify and hold harmless the
-        Service Provider against any claim brought by a third party in connection with
-        your use of the material.
+      <p>
+        Ao baixar ou utilizar o Aplicativo, você concorda automaticamente com os termos a
+        seguir. Recomenda-se enfaticamente que você leia e compreenda integralmente estes
+        termos antes de usar o Aplicativo.
       </p>
-    </div>
 
-    <h2>Intellectual property</h2>
-    <p>
-      Unauthorized copying, modification of the Application, any part of the Application,
-      or its trademarks is strictly prohibited. Any attempts to extract the source code of
-      the Application, translate the Application into other languages, or create
-      derivative versions are not permitted. All trademarks, copyrights, database rights,
-      and other intellectual property rights related to the Application remain the
-      property of the Service Provider.
-    </p>
+      <h2>Exigência de idade e aviso sobre o conteúdo</h2>
+      <div class="warning">
+        <p>
+          O Aplicativo é destinado exclusivamente a usuários com 18 anos de idade ou mais.
+          Ele contém palavrões, xingamentos, linguagem sexualmente explícita e humor
+          grosseiro apresentados em um contexto educacional (aprendizado de idiomas). Ao usar
+          o Aplicativo, você confirma que tem pelo menos 18 anos de idade e que entende que o
+          conteúdo é deliberadamente provocativo. O Provedor do Serviço não apoia o uso de
+          qualquer linguagem ensinada no Aplicativo contra qualquer pessoa ou grupo; o
+          conteúdo existe para fins de compreensão cultural e linguística. Se você considera
+          esse tipo de material ofensivo, não use o Aplicativo.
+        </p>
+        <p style="margin-top: 10px;">
+          <strong>O Aplicativo é fornecido apenas para fins de entretenimento e
+          educação.</strong> Seu conteúdo é intencionalmente grosseiro, irreverente e não
+          deve ser levado a sério. Você é o único responsável pela forma como utiliza a
+          linguagem e o material ensinados pelo Aplicativo. O Provedor do Serviço não assume
+          qualquer responsabilidade por qualquer consequência &mdash; social, profissional,
+          pessoal, jurídica ou de outra natureza &mdash; decorrente da sua decisão de
+          repetir, compartilhar ou de qualquer forma agir com base no conteúdo. Ao usar o
+          Aplicativo, você concorda em indenizar e isentar de responsabilidade o Provedor do
+          Serviço contra qualquer reivindicação apresentada por terceiros em conexão com o seu
+          uso do material.
+        </p>
+      </div>
 
-    <h2>Changes and in-app purchases</h2>
-    <p>
-      The Service Provider is dedicated to ensuring that the Application is as beneficial
-      and efficient as possible. As such, they reserve the right to modify the Application
-      or charge for their services at any time and for any reason. The Service Provider
-      assures you that any charges for the Application or its services will be clearly
-      communicated to you.
-    </p>
-    <p>
-      In-app purchases offered through the Application are processed by Apple App Store or
-      Google Play. Refunds, billing disputes, and purchase restoration are handled by
-      those store providers in accordance with their respective policies. The Service
-      Provider has no direct access to your payment information.
-    </p>
+      <h2>Propriedade intelectual</h2>
+      <p>
+        A cópia não autorizada, a modificação do Aplicativo, de qualquer parte do Aplicativo
+        ou de suas marcas é estritamente proibida. Não são permitidas quaisquer tentativas de
+        extrair o código-fonte do Aplicativo, traduzir o Aplicativo para outros idiomas ou
+        criar versões derivadas. Todas as marcas, direitos autorais, direitos sobre bancos de
+        dados e demais direitos de propriedade intelectual relacionados ao Aplicativo
+        permanecem propriedade do Provedor do Serviço.
+      </p>
 
-    <h2>Data storage and device security</h2>
-    <p>
-      The Application stores and processes data that you provide (such as your chosen
-      display name, language preferences, and learning progress) entirely on the local
-      storage of your device. This data is not transmitted to, or stored by, the Service
-      Provider. It is your responsibility to maintain the security of your device and
-      access to the Application.
-    </p>
-    <p>
-      The Service Provider strongly advises against jailbreaking or rooting your phone,
-      which involves removing software restrictions and limitations imposed by the
-      official operating system of your device. Such actions could expose your phone to
-      malware, viruses, malicious programs, compromise your phone&rsquo;s security
-      features, and may result in the Application not functioning correctly or at all.
-    </p>
+      <h2>Alterações e compras dentro do aplicativo</h2>
+      <p>
+        O Provedor do Serviço dedica-se a assegurar que o Aplicativo seja o mais útil e
+        eficiente possível. Por essa razão, reserva-se o direito de modificar o Aplicativo ou
+        de cobrar pelos seus serviços a qualquer momento e por qualquer motivo. O Provedor do
+        Serviço garante que quaisquer cobranças pelo Aplicativo ou pelos seus serviços serão
+        comunicadas a você de forma clara.
+      </p>
+      <p>
+        As compras dentro do aplicativo oferecidas por meio do Aplicativo são processadas pela
+        App Store da Apple ou pelo Google Play. Reembolsos, contestações de cobrança e a
+        restauração de compras são tratados por esses provedores de loja de acordo com as suas
+        respectivas políticas. O Provedor do Serviço não tem acesso direto às suas informações
+        de pagamento.
+      </p>
 
-    <h2>Third-party services</h2>
-    <p>
-      The Application utilizes third-party services that have their own Terms and
-      Conditions:
-    </p>
-    <ul>
-      <li>
-        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a>
-      </li>
-      <li>
-        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob</a>
-      </li>
-    </ul>
+      <h2>Armazenamento de dados e segurança do dispositivo</h2>
+      <p>
+        O Aplicativo armazena e processa os dados que você fornece (como o nome de exibição
+        escolhido, as preferências de idioma e o progresso de aprendizado) inteiramente no
+        armazenamento local do seu dispositivo. Esses dados não são transmitidos ao Provedor
+        do Serviço nem armazenados por ele. É sua responsabilidade manter a segurança do seu
+        dispositivo e o acesso ao Aplicativo.
+      </p>
+      <p>
+        O Provedor do Serviço recomenda enfaticamente que você não faça jailbreak nem root no
+        seu telefone, o que envolve a remoção das restrições e limitações de software impostas
+        pelo sistema operacional oficial do seu dispositivo. Tais ações podem expor o seu
+        telefone a malware, vírus e programas maliciosos, comprometer os recursos de segurança
+        do seu telefone e podem fazer com que o Aplicativo não funcione corretamente ou não
+        funcione de forma alguma.
+      </p>
 
-    <h2>Connectivity, charges, and device responsibility</h2>
-    <p>
-      Some functions of the Application require an active internet connection, which can
-      be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be
-      held responsible if the Application does not function at full capacity due to lack
-      of access to Wi-Fi or if you have exhausted your data allowance.
-    </p>
-    <p>
-      If you are using the Application outside of a Wi-Fi area, please be aware that your
-      mobile network provider&rsquo;s agreement terms still apply. Consequently, you may
-      incur charges from your mobile provider for data usage during the connection to the
-      Application, or other third-party charges. By using the Application, you accept
-      responsibility for any such charges, including roaming data charges if you use the
-      Application outside of your home territory without disabling data roaming. If you
-      are not the bill payer for the device on which you are using the Application, the
-      Service Provider assumes that you have obtained permission from the bill payer.
-    </p>
-    <p>
-      The Service Provider cannot always assume responsibility for your usage of the
-      Application. For instance, it is your responsibility to ensure that your device
-      remains charged. If your device runs out of battery and you are unable to access the
-      Service, the Service Provider cannot be held responsible.
-    </p>
-    <p>
-      While the Service Provider strives to ensure that the Application is updated and
-      accurate at all times, they do rely on third parties to provide information so that
-      they can make it available to you. The Service Provider accepts no liability for any
-      loss, direct or indirect, that you experience as a result of relying entirely on
-      this functionality of the Application.
-    </p>
+      <h2>Serviços de terceiros</h2>
+      <p>
+        O Aplicativo utiliza serviços de terceiros que possuem os seus próprios Termos e
+        Condições:
+      </p>
+      <ul>
+        <li>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a>
+        </li>
+        <li>
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob</a>
+        </li>
+      </ul>
 
-    <h2>Updates and termination</h2>
-    <p>
-      The Service Provider may wish to update the Application at some point. The
-      Application is currently available as per the requirements for the operating system
-      (and for any additional systems they decide to extend the availability of the
-      Application to) &mdash; these may change, and you will need to download the updates
-      if you want to continue using the Application. The Service Provider does not
-      guarantee that it will always update the Application so that it is relevant to you
-      and/or compatible with the particular operating system version installed on your
-      device. However, you agree to always accept updates to the Application when offered
-      to you.
-    </p>
-    <p>
-      The Service Provider may also wish to cease providing the Application and may
-      terminate its use at any time without providing termination notice to you. Unless
-      they inform you otherwise, upon any termination: (a) the rights and licenses granted
-      to you in these terms will end; (b) you must cease using the Application, and (if
-      necessary) delete it from your device.
-    </p>
+      <h2>Conectividade, cobranças e responsabilidade pelo dispositivo</h2>
+      <p>
+        Algumas funções do Aplicativo exigem uma conexão de internet ativa, que pode ser
+        Wi-Fi ou fornecida pela sua operadora de rede móvel. O Provedor do Serviço não pode
+        ser responsabilizado caso o Aplicativo não funcione em plena capacidade devido à falta
+        de acesso a Wi-Fi ou caso você tenha esgotado a sua franquia de dados.
+      </p>
+      <p>
+        Se você estiver usando o Aplicativo fora de uma área de Wi-Fi, esteja ciente de que os
+        termos do contrato da sua operadora de rede móvel continuam aplicáveis.
+        Consequentemente, você pode incorrer em cobranças da sua operadora pelo uso de dados
+        durante a conexão ao Aplicativo, ou em outras cobranças de terceiros. Ao usar o
+        Aplicativo, você assume a responsabilidade por quaisquer dessas cobranças, incluindo
+        cobranças de dados em roaming caso use o Aplicativo fora do seu território de origem
+        sem desativar o roaming de dados. Se você não for o responsável pelo pagamento da
+        conta do dispositivo no qual está usando o Aplicativo, o Provedor do Serviço presume
+        que você obteve permissão do responsável pelo pagamento da conta.
+      </p>
+      <p>
+        O Provedor do Serviço nem sempre pode assumir responsabilidade pelo seu uso do
+        Aplicativo. Por exemplo, é sua responsabilidade garantir que o seu dispositivo
+        permaneça carregado. Se o seu dispositivo ficar sem bateria e você não conseguir
+        acessar o Serviço, o Provedor do Serviço não pode ser responsabilizado.
+      </p>
+      <p>
+        Embora o Provedor do Serviço se esforce para garantir que o Aplicativo esteja sempre
+        atualizado e preciso, ele depende de terceiros para fornecer informações que possa
+        disponibilizar a você. O Provedor do Serviço não aceita qualquer responsabilidade por
+        qualquer perda, direta ou indireta, que você venha a sofrer em decorrência de confiar
+        inteiramente nessa funcionalidade do Aplicativo.
+      </p>
 
-    <h2>Changes to these Terms and Conditions</h2>
-    <p>
-      The Service Provider may periodically update these Terms and Conditions. You are
-      advised to review this page regularly for any changes. The Service Provider will
-      notify you of any changes by posting the new Terms and Conditions on this page.
-    </p>
+      <h2>Atualizações e rescisão</h2>
+      <p>
+        O Provedor do Serviço pode desejar atualizar o Aplicativo em algum momento. O
+        Aplicativo está atualmente disponível conforme os requisitos do sistema operacional (e
+        de quaisquer sistemas adicionais aos quais decidam estender a disponibilidade do
+        Aplicativo) &mdash; esses requisitos podem mudar, e você precisará baixar as
+        atualizações se quiser continuar usando o Aplicativo. O Provedor do Serviço não
+        garante que sempre atualizará o Aplicativo de modo que ele seja relevante para você
+        e/ou compatível com a versão específica do sistema operacional instalada no seu
+        dispositivo. Contudo, você concorda em sempre aceitar as atualizações do Aplicativo
+        quando elas lhe forem oferecidas.
+      </p>
+      <p>
+        O Provedor do Serviço também pode desejar interromper a disponibilização do Aplicativo
+        e pode encerrar o seu uso a qualquer momento, sem lhe fornecer aviso de rescisão. Salvo
+        se informado de outra forma, mediante qualquer rescisão: (a) os direitos e as licenças
+        concedidos a você nestes termos terminarão; (b) você deverá deixar de usar o
+        Aplicativo e, se necessário, excluí-lo do seu dispositivo.
+      </p>
 
-    <div class="effective">
-      These Terms and Conditions are effective as of <strong>2026-05-20</strong>.
-    </div>
+      <h2>Consumidores residentes no Brasil (Código de Defesa do Consumidor)</h2>
+      <p>
+        Se você for consumidor residente no Brasil, a sua relação com o Provedor do Serviço é
+        regida também pelo Código de Defesa do Consumidor (Lei nº 8.078/1990 &mdash;
+        &ldquo;CDC&rdquo;), cujas normas de ordem pública prevalecem, no que for aplicável,
+        sobre disposições conflitantes destes Termos. Estes Termos constituem um contrato de
+        adesão, nos termos do Artigo 54 do CDC, pois as suas cláusulas foram estabelecidas
+        unilateralmente pelo Provedor do Serviço, sem que você possa discuti-las ou
+        modificá-las substancialmente; a sua aceitação ocorre pelo download ou uso do
+        Aplicativo.
+      </p>
+      <p>
+        Em cumprimento ao Artigo 54, &sect;&sect; 3&ordm; e 4&ordm;, do CDC, estes Termos são
+        redigidos em linguagem clara e legível, e as cláusulas que implicam limitação dos seus
+        direitos como consumidor são apresentadas com destaque, conforme abaixo, para permitir
+        a sua imediata e fácil compreensão antes da contratação:
+      </p>
+      <div class="highlight">
+        <span class="label">Cláusulas que limitam direitos do consumidor (CDC, Art. 54, &sect; 4&ordm;)</span>
+        <p>
+          Chamamos a sua atenção, em especial, para as seguintes cláusulas que limitam ou
+          condicionam direitos: (i) a isenção de responsabilidade do Provedor do Serviço por
+          consequências decorrentes do uso do conteúdo e a sua obrigação de indenizar terceiros
+          (seção &ldquo;Exigência de idade e aviso sobre o conteúdo&rdquo;); (ii) a aceitação
+          obrigatória de atualizações e a possibilidade de rescisão do serviço sem aviso prévio
+          (seção &ldquo;Atualizações e rescisão&rdquo;); e (iii) as limitações de
+          responsabilidade relativas a conectividade, cobranças de terceiros e disponibilidade
+          do Aplicativo (seção &ldquo;Conectividade, cobranças e responsabilidade pelo
+          dispositivo&rdquo;). Tais limitações aplicam-se apenas na medida permitida pela
+          legislação brasileira e <strong>não afastam as garantias legais nem os direitos
+          irrenunciáveis assegurados ao consumidor pelo CDC.</strong>
+        </p>
+      </div>
+      <p>
+        Nada nestes Termos exclui ou restringe direitos que o CDC assegure de forma
+        irrenunciável ao consumidor, incluindo o direito de arrependimento na contratação fora
+        do estabelecimento (Artigo 49 do CDC) e as garantias legais aplicáveis. Cláusulas
+        consideradas abusivas nos termos do Artigo 51 do CDC serão tidas por nulas de pleno
+        direito, preservando-se as demais disposições destes Termos. Para reclamações de
+        consumo, você pode também recorrer aos órgãos de defesa do consumidor (como o Procon) e
+        à plataforma oficial <a href="https://www.consumidor.gov.br" target="_blank" rel="noopener noreferrer">consumidor.gov.br</a>.
+      </p>
 
-    <h2>Governing law</h2>
-    <p>
-      These Terms and Conditions are governed by the laws of Italy. Any dispute arising in
-      connection with the Application shall be subject to the exclusive jurisdiction of
-      the courts of Italy.
-    </p>
+      <h2>Alterações nestes Termos e Condições</h2>
+      <p>
+        O Provedor do Serviço pode atualizar estes Termos e Condições periodicamente.
+        Recomenda-se que você revise esta página regularmente para verificar quaisquer
+        alterações. O Provedor do Serviço notificará você sobre quaisquer alterações
+        publicando os novos Termos e Condições nesta página.
+      </p>
 
-    <h2>Contact us</h2>
-    <p>
-      If you have any questions or suggestions about these Terms and Conditions, please
-      contact the Service Provider at
-      <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
-    </p>
+      <div class="effective">
+        Estes Termos e Condições entram em vigor em <strong>2026-05-22</strong>.
+      </div>
 
-    <footer>
-      &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler
-    </footer>
+      <h2>Lei aplicável</h2>
+      <p>
+        Estes Termos e Condições são regidos pelas leis da Itália. Qualquer disputa decorrente
+        em conexão com o Aplicativo estará sujeita à jurisdição exclusiva dos tribunais da
+        Itália. Caso você seja consumidor residente no Brasil, esta cláusula não prejudica o
+        seu direito de demandar no foro do seu domicílio nem a aplicação das normas de proteção
+        ao consumidor previstas no Código de Defesa do Consumidor.
+      </p>
+
+      <h2>Fale conosco</h2>
+      <p>
+        Se você tiver qualquer dúvida ou sugestão sobre estes Termos e Condições, entre em
+        contato com o Provedor do Serviço pelo e-mail
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
+
+      <footer>
+        &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler
+      </footer>
+    </section>
+
+    <!-- ========================= ENGLISH ========================= -->
+    <section class="lang-block" data-lang="en" lang="en">
+      <p class="eyebrow">Insulto · Legal</p>
+      <h1>Terms &amp; Conditions</h1>
+
+      <p>
+        These terms and conditions apply to the Insulto app (hereby referred to as
+        &ldquo;Application&rdquo;) for mobile devices that was created jointly by Paulo
+        Oliveira and Jacqueline Wendler (hereby referred to collectively as &ldquo;Service
+        Provider&rdquo;) as an Ad Supported service.
+      </p>
+      <p>
+        Upon downloading or utilizing the Application, you are automatically agreeing to the
+        following terms. It is strongly advised that you thoroughly read and understand these
+        terms prior to using the Application.
+      </p>
+
+      <h2>Age requirement and content warning</h2>
+      <div class="warning">
+        <p>
+          The Application is intended exclusively for users aged 18 and older. It contains
+          profanity, slurs, sexually explicit language, and crude humor presented in an
+          educational context (language learning). By using the Application you confirm that
+          you are at least 18 years old and that you understand the content is deliberately
+          provocative. The Service Provider does not endorse the use of any language taught
+          in the Application against any person or group; the content exists for cultural
+          and linguistic comprehension. If you find this kind of material offensive, do not
+          use the Application.
+        </p>
+        <p style="margin-top: 10px;">
+          <strong>The Application is provided for entertainment and educational purposes
+          only.</strong> Its content is intentionally crude, irreverent, and not meant to be
+          taken seriously. You are solely responsible for how you use the language and
+          material taught by the Application. The Service Provider accepts no responsibility
+          for any consequence &mdash; social, professional, personal, legal, or otherwise
+          &mdash; arising from your decision to repeat, share, or otherwise act on the
+          content. By using the Application, you agree to indemnify and hold harmless the
+          Service Provider against any claim brought by a third party in connection with
+          your use of the material.
+        </p>
+      </div>
+
+      <h2>Intellectual property</h2>
+      <p>
+        Unauthorized copying, modification of the Application, any part of the Application,
+        or its trademarks is strictly prohibited. Any attempts to extract the source code of
+        the Application, translate the Application into other languages, or create
+        derivative versions are not permitted. All trademarks, copyrights, database rights,
+        and other intellectual property rights related to the Application remain the
+        property of the Service Provider.
+      </p>
+
+      <h2>Changes and in-app purchases</h2>
+      <p>
+        The Service Provider is dedicated to ensuring that the Application is as beneficial
+        and efficient as possible. As such, they reserve the right to modify the Application
+        or charge for their services at any time and for any reason. The Service Provider
+        assures you that any charges for the Application or its services will be clearly
+        communicated to you.
+      </p>
+      <p>
+        In-app purchases offered through the Application are processed by Apple App Store or
+        Google Play. Refunds, billing disputes, and purchase restoration are handled by
+        those store providers in accordance with their respective policies. The Service
+        Provider has no direct access to your payment information.
+      </p>
+
+      <h2>Data storage and device security</h2>
+      <p>
+        The Application stores and processes data that you provide (such as your chosen
+        display name, language preferences, and learning progress) entirely on the local
+        storage of your device. This data is not transmitted to, or stored by, the Service
+        Provider. It is your responsibility to maintain the security of your device and
+        access to the Application.
+      </p>
+      <p>
+        The Service Provider strongly advises against jailbreaking or rooting your phone,
+        which involves removing software restrictions and limitations imposed by the
+        official operating system of your device. Such actions could expose your phone to
+        malware, viruses, malicious programs, compromise your phone&rsquo;s security
+        features, and may result in the Application not functioning correctly or at all.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        The Application utilizes third-party services that have their own Terms and
+        Conditions:
+      </p>
+      <ul>
+        <li>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a>
+        </li>
+        <li>
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob</a>
+        </li>
+      </ul>
+
+      <h2>Connectivity, charges, and device responsibility</h2>
+      <p>
+        Some functions of the Application require an active internet connection, which can
+        be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be
+        held responsible if the Application does not function at full capacity due to lack
+        of access to Wi-Fi or if you have exhausted your data allowance.
+      </p>
+      <p>
+        If you are using the Application outside of a Wi-Fi area, please be aware that your
+        mobile network provider&rsquo;s agreement terms still apply. Consequently, you may
+        incur charges from your mobile provider for data usage during the connection to the
+        Application, or other third-party charges. By using the Application, you accept
+        responsibility for any such charges, including roaming data charges if you use the
+        Application outside of your home territory without disabling data roaming. If you
+        are not the bill payer for the device on which you are using the Application, the
+        Service Provider assumes that you have obtained permission from the bill payer.
+      </p>
+      <p>
+        The Service Provider cannot always assume responsibility for your usage of the
+        Application. For instance, it is your responsibility to ensure that your device
+        remains charged. If your device runs out of battery and you are unable to access the
+        Service, the Service Provider cannot be held responsible.
+      </p>
+      <p>
+        While the Service Provider strives to ensure that the Application is updated and
+        accurate at all times, they do rely on third parties to provide information so that
+        they can make it available to you. The Service Provider accepts no liability for any
+        loss, direct or indirect, that you experience as a result of relying entirely on
+        this functionality of the Application.
+      </p>
+
+      <h2>Updates and termination</h2>
+      <p>
+        The Service Provider may wish to update the Application at some point. The
+        Application is currently available as per the requirements for the operating system
+        (and for any additional systems they decide to extend the availability of the
+        Application to) &mdash; these may change, and you will need to download the updates
+        if you want to continue using the Application. The Service Provider does not
+        guarantee that it will always update the Application so that it is relevant to you
+        and/or compatible with the particular operating system version installed on your
+        device. However, you agree to always accept updates to the Application when offered
+        to you.
+      </p>
+      <p>
+        The Service Provider may also wish to cease providing the Application and may
+        terminate its use at any time without providing termination notice to you. Unless
+        they inform you otherwise, upon any termination: (a) the rights and licenses granted
+        to you in these terms will end; (b) you must cease using the Application, and (if
+        necessary) delete it from your device.
+      </p>
+
+      <h2>Changes to these Terms and Conditions</h2>
+      <p>
+        The Service Provider may periodically update these Terms and Conditions. You are
+        advised to review this page regularly for any changes. The Service Provider will
+        notify you of any changes by posting the new Terms and Conditions on this page.
+      </p>
+
+      <div class="effective">
+        These Terms and Conditions are effective as of <strong>2026-05-22</strong>.
+      </div>
+
+      <h2>Governing law</h2>
+      <p>
+        These Terms and Conditions are governed by the laws of Italy. Any dispute arising in
+        connection with the Application shall be subject to the exclusive jurisdiction of
+        the courts of Italy.
+      </p>
+
+      <h2>Contact us</h2>
+      <p>
+        If you have any questions or suggestions about these Terms and Conditions, please
+        contact the Service Provider at
+        <a href="mailto:insultoapp@gmail.com">insultoapp@gmail.com</a>.
+      </p>
+
+      <footer>
+        &copy; 2026 Insulto &middot; Paulo Oliveira &amp; Jacqueline Wendler
+      </footer>
+    </section>
+
   </main>
+
+  <script>
+    (function () {
+      var AVAILABLE = ['pt', 'en'];
+      var DEFAULT_LANG = 'pt';
+
+      function pickInitialLang() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var fromQuery = params.get('lang');
+          if (fromQuery && AVAILABLE.indexOf(fromQuery) !== -1) return fromQuery;
+        } catch (_) { /* no-op */ }
+        var browser = (navigator.language || navigator.userLanguage || DEFAULT_LANG).toLowerCase();
+        if (browser.indexOf('pt') === 0) return 'pt';
+        if (browser.indexOf('en') === 0) return 'en';
+        return DEFAULT_LANG;
+      }
+
+      function setLang(lang) {
+        var sections = document.querySelectorAll('section.lang-block');
+        var buttons = document.querySelectorAll('nav.lang-switch button');
+        sections.forEach(function (el) { el.classList.toggle('active', el.dataset.lang === lang); });
+        buttons.forEach(function (el) { el.classList.toggle('active', el.dataset.lang === lang); });
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+        document.title = lang === 'pt'
+          ? 'Termos & Condições — Insulto'
+          : 'Terms & Conditions — Insulto';
+      }
+
+      var initial = pickInitialLang();
+      if (initial !== DEFAULT_LANG) setLang(initial);
+
+      document.querySelectorAll('nav.lang-switch button').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+    })();
+  </script>
 </body>
 </html>
